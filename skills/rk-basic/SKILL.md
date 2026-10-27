@@ -30,6 +30,7 @@ description: "Review assistant for the Advanced System Architect exam: plain-lan
 - 知识产权、保护期限、权属、标准分类、标准编号：读 [law-standards.md](references/law-standards.md)。
 - 考前速记、背诵清单、易混点总复习：读 [cheatsheet.md](references/cheatsheet.md)。
 - 用户要通俗讲解、分层提示、举一反三或同类题训练时，读 [learning-transfer.md](references/learning-transfer.md)。
+- 用户要做公式、图题、计算或考场操作题时，读 [exam-drill.md](references/exam-drill.md)。
 
 ## 输出格式
 

@@ -43,6 +43,7 @@ description: "Case drill coach for the Advanced System Architect exam: four-opti
 - 需要把具体题目映射到专题时，读取 [topic-index.md](references/topic-index.md)。
 - 需要给出分问答题模板时，读取 [topic-patterns.md](references/topic-patterns.md)。
 - 用户要模拟练习、同类题变式或出题套路时，读取 [case-bank.md](references/case-bank.md)。
+- 需要排除已练题、登记来源或生成覆盖报告时，读取 [question-index.md](references/question-index.md)。
 
 ## 默认输出
 

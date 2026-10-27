@@ -29,6 +29,7 @@ description: "$rk-essay-template - 用于根据软考论文题目和用户项目
 - 需要借鉴范文或模板资料时，读取 [essay-sample-patterns.md](references/essay-sample-patterns.md)，只吸收结构，不复写原文。
 - 需要参考近年论文真题的命题分布和替换方向时，读取 [past-paper-map.md](references/past-paper-map.md)。
 - 用户提供范文、必背材料或模板资料时，读取 [source-material-boundaries.md](references/source-material-boundaries.md)。
+- 用户要求导出或验收 Word、DOCX、PDF 时，读取 [artifact-qa.md](references/artifact-qa.md)。
 
 ## 输出要求
 
