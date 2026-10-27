@@ -15,6 +15,7 @@ description: "Must-memorize case-analysis knowledge cards for the Advanced Syste
 4. `今日背` 必须输出「考场卡」，不是速记提纲。每张卡都要围绕案例分析采分链路展开：`题干触发词 -> 考点归类 -> 采分点 -> 答题模板 -> 易丢分 -> 默写检查`。
 5. 单专题查询默认也输出考场卡；只有用户明确说“简版”“速记”“只要提纲”时，才压缩成短卡。
 6. 用户给出具体案例题、答案草稿、要求出题或估分时，提醒改用 `rk-case-drill`。
+7. 若工作区提供 `.rk-local/study-state.md`，优先选择当前薄弱专题；输出记录时按 [状态协议](../rk-study/references/state-contract.md) 保留掌握三态和下一次练习。没有状态文件时继续输出可复制的记录行。
 
 ## 默认菜单
 
@@ -112,3 +113,8 @@ description: "Must-memorize case-analysis knowledge cards for the Advanced Syste
 - 具体真题拆解、答案诊断、模拟评分交给 `rk-case-drill` Skill。
 - 基础概念、选择题知识点交给 `rk-basic` Skill。
 - 论文结构、项目事实和论文评分交给 `rk-essay` Skill。
+
+## 状态与来源
+
+- 每张卡结束补一个闭卷默写动作，并标记「不会、提示后答出、独立答出」。
+- 真题、回忆、预测和原创训练题必须保留来源性质；冲突时遵循 [来源协议](../rk-study/references/source-provenance.md)。

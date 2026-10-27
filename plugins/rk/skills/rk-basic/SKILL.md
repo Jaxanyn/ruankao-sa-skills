@@ -16,6 +16,7 @@ description: "Review assistant for the Advanced System Architect exam: plain-lan
 5. 遇到刷题复盘，说明错因、对应考点、同类题型和下次判断规则。
 6. 每次解释知识点时，补一句它通常怎么考、容易掉进什么陷阱、下一题练什么、能迁移到案例或论文的哪个角度。
 7. 若用户明确说「直接给答案」「不要练」，直接回答，不强制进入练习流程。
+8. 若工作区提供 `.rk-local/study-state.md`，先读取当前主题、掌握状态和错题标签；练习结束时按 [状态协议](../rk-study/references/state-contract.md) 给出下一步。没有状态文件时继续按单次复习运行。
 
 ## 模块路由
 
@@ -103,6 +104,12 @@ description: "Review assistant for the Advanced System Architect exam: plain-lan
 最后 1 分钟判断：
 下次练什么：
 ```
+
+## 状态与证据
+
+- 掌握状态只用「不会、提示后答出、独立答出」三态；看过答案不算独立答出。
+- 指标示范值必须标为「示例目标」，用户实测值必须带来源；没有实测值时用定性结果，不补数字。
+- 需要跨 Skill 传递主题、错题或来源时，遵循 [状态协议](../rk-study/references/state-contract.md) 和 [来源协议](../rk-study/references/source-provenance.md)。
 
 ## 边界
 

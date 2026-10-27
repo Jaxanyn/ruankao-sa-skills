@@ -1,0 +1,4 @@
+interface:
+  display_name: "rk-study"
+  short_description: "Resume study state and route the next exam task."
+  default_prompt: "Use $rk-study to continue my exam study, choose one next task, and record the mastery state."

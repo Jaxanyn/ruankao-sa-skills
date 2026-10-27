@@ -1,10 +1,10 @@
 {
   "name": "rk",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "软考系统架构设计师基础知识、专业英语、案例必背卡、案例真题训练和论文训练 Skills。",
   "author": {
     "name": "Jax",
-    "url": "https://github.com/YinJax"
+    "url": "https://github.com/Jaxanyn"
   },
   "homepage": "https://github.com/Jaxanyn/ruankao-sa-skills",
   "repository": "https://github.com/Jaxanyn/ruankao-sa-skills",
@@ -14,12 +14,13 @@
   "interface": {
     "displayName": "RK Coach",
     "shortDescription": "软考系统架构设计师基础、英语、案例与论文训练",
-    "longDescription": "RK Coach 提供七个独立 Skill：rk-basic 用通俗讲解、计算题步骤和举一反三补基础，rk-english 复习专业英语高频词，rk-case-card 生成案例必背知识卡，rk-case-drill 训练具体案例题、分层提示和变式短练，rk-essay-template 生成可替换论文模板，rk-essay-final 考前按押题主题生成论点卡，rk-essay 诊断和修改论文。",
+      "longDescription": "RK Coach 提供八个 Skill：rk-study 编排复习状态和下一步任务，rk-basic 用通俗讲解、计算题步骤和举一反三补基础，rk-english 复习专业英语高频词，rk-case-card 生成案例必背知识卡，rk-case-drill 训练具体案例题、分层提示和变式短练，rk-essay-template 生成可替换论文模板，rk-essay-final 考前按押题主题生成论点卡，rk-essay 诊断和修改论文。",
     "developerName": "Jax",
     "category": "Productivity",
     "capabilities": ["Interactive"],
     "websiteURL": "https://github.com/Jaxanyn/ruankao-sa-skills",
-    "defaultPrompt": [
+      "defaultPrompt": [
+      "Use $rk-study to choose the next review task and carry forward study state",
       "Use $rk-basic to explain this exam topic plainly and give one transfer drill",
       "Use $rk-english to review professional English terms",
       "Use $rk-case-card to review must-memorize case topics",

@@ -14,6 +14,7 @@ description: "Professional English vocabulary review for the Advanced System Arc
 3. 每次只输出一个专题的 10 到 15 个词，避免一次内容过多。
 4. 输出只保留「英语词汇、中文、真题例句与中文意思」三列。
 5. 例句中必须用加粗标出目标高频词。
+6. 用户或 `rk-study` 请求闭环训练时，在词表后追加 5 道词义或完形小测，并记录错词；默认速记模式仍保持三列表格。
 
 ## 专题
 
@@ -40,5 +41,6 @@ description: "Professional English vocabulary review for the Advanced System Arc
 
 - 只在例句来源明确时称为「真题例句」；来源不明确时，标注为「考点例句」或「真题风格例句」。
 - 不输出题型、陷阱、记忆口诀、使用场景、答题策略，除非用户明确要求。
+- 进入闭环训练时，按 [状态协议](../rk-study/references/state-contract.md) 记录掌握三态；小测例句的来源性质按 [来源协议](../rk-study/references/source-provenance.md) 标注。
 - 不承诺押题或覆盖全部考试词汇。
 - 若用户提供历年真题材料，优先从用户材料中抽取原句，并保持短句引用。

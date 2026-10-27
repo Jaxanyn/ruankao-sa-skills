@@ -1,11 +1,11 @@
 # 软考系统架构设计师 Skills
 
-把软考高级系统架构设计师备考拆成七个可调用的 AI 教练：基础知识、专业英语、案例必背卡、案例真题训练、论文模板生成、论文考前押题材料、论文草稿诊断。
+把软考高级系统架构设计师备考拆成八个可调用的 AI 教练：学习编排、基础知识、专业英语、案例必背卡、案例真题训练、论文模板生成、论文考前押题材料、论文草稿诊断。
 
 `ruankao-sa-skills` 适合在复习知识点、记专业英语、背案例专题、拆案例题、整理项目素材、生成论文母版、考前押题生成论点卡和打磨论文草稿时使用。每个 Skill 都有自己的工作流、参考资料和输出边界，可以单独调用，也可以按备考节奏串起来。
 
 <div align="center">
-  <img src="assets/rk-skills.svg" width="100%" alt="软考系统架构设计师七个命令流程图：先用 /rk-basic 补基础，用 /rk-english 记英语，用 /rk-case-card 背案例专题，用 /rk-case-drill 练具体真题，再进入 /rk-essay-template、/rk-essay-final 和 /rk-essay 的论文训练。" />
+  <img src="assets/rk-skills.svg" width="100%" alt="软考系统架构设计师八个命令流程图：先用 /rk-study 编排学习，再用 /rk-basic 补基础，用 /rk-english 记英语，用 /rk-case-card 背案例专题，用 /rk-case-drill 练具体真题，最后进入论文训练。" />
   <p><sub>紧凑两行命令地图：/rk-case-card 负责背案例必备专题，/rk-case-drill 负责练具体案例题。</sub></p>
 </div>
 
@@ -13,6 +13,7 @@
 
 | Skill | 你遇到的问题 | 它会产出什么 |
 | --- | --- | --- |
+| `/rk-study` | 想继续上次学习、按薄弱点安排任务、记录掌握状态 | 下一项任务、掌握三态、错误标签、来源和事实边界 |
 | `/rk-basic` | 选择题知识点看不懂、计算题不会拆步骤、易混概念记不牢、想举一反三 | 通俗讲解、考点解释、计算步骤、知识框架、变式练习、考前速记 |
 | `/rk-english` | 专业英语 5 道题想快速记高频词，不想看太长解析 | 按专题分类的英语词汇、中文含义、真题或考点例句中文意思 |
 | `/rk-case-card` | 不知道今天背什么，想用 4 个入口完成今日背、稳分题、新方向和记录 | 背诵菜单、今日卡、专题卡、新方向转译卡、复习记录模板 |
@@ -21,14 +22,14 @@
 | `/rk-essay-final` | 考前遇到押题主题，想基于固定项目快速生成可背论点卡 | 适配判断、题干义务、3 张论点卡、项目素材、背诵句、跑题提醒 |
 | `/rk-essay` | 已经写出论文草稿，但不知道是否覆盖题干、哪里容易失分 | 题目覆盖诊断、项目事实检查、训练估分、优先修改项 |
 
-推荐节奏：先用 `rk-basic` 补知识点，用 `rk-english` 记高频专业英语，再用 `rk-case-card` 背案例必备专题，用 `rk-case-drill` 训练分问作答，接着用 `rk-essay-template` 把真实项目整理成可替换母版，考前用 `rk-essay-final` 按押题主题生成论点卡，最后用 `rk-essay` 检查草稿的题干覆盖和过线风险。
+推荐节奏：先用 `rk-study` 读取学习状态并选择下一步；基础知识用 `rk-basic`，专业英语用 `rk-english`，案例背诵用 `rk-case-card`，具体案例训练用 `rk-case-drill`，论文模板用 `rk-essay-template`，考前论点卡用 `rk-essay-final`，论文诊断用 `rk-essay`。每次完成后回到 `rk-study` 记录掌握状态和下一项任务。
 
 ## Quick Start
 
 推荐用 `npx skills` 安装，适合 Codex、Claude Code、Cursor 等支持 `SKILL.md` 的 Agent：
 
 ```bash
-npx skills@latest add Jaxanyn/ruankao-sa-skills -a codex -g --skill rk-basic --skill rk-english --skill rk-case-card --skill rk-case-drill --skill rk-essay --skill rk-essay-template --skill rk-essay-final -y
+npx skills@latest add Jaxanyn/ruankao-sa-skills -a codex -g --skill rk-study --skill rk-basic --skill rk-english --skill rk-case-card --skill rk-case-drill --skill rk-essay --skill rk-essay-template --skill rk-essay-final -y
 ```
 
 安装后新开一个任务，让客户端重新加载 Skill，然后直接调用：
@@ -49,10 +50,10 @@ npx skills@latest add Jaxanyn/ruankao-sa-skills -a codex -g -y
 
 ### Recommended: `npx skills`
 
-安装指定的七个 Skill：
+安装指定的八个 Skill：
 
 ```bash
-npx skills@latest add Jaxanyn/ruankao-sa-skills -a codex -g --skill rk-basic --skill rk-english --skill rk-case-card --skill rk-case-drill --skill rk-essay --skill rk-essay-template --skill rk-essay-final -y
+npx skills@latest add Jaxanyn/ruankao-sa-skills -a codex -g --skill rk-study --skill rk-basic --skill rk-english --skill rk-case-card --skill rk-case-drill --skill rk-essay --skill rk-essay-template --skill rk-essay-final -y
 ```
 
 把 `codex` 换成你的目标 Agent，例如 `claude-code`、`cursor` 或其它 `skills` CLI 支持的 Agent。
@@ -62,7 +63,7 @@ npx skills@latest add Jaxanyn/ruankao-sa-skills -a codex -g --skill rk-basic --s
 已经用 `npx skills` 安装过时，重新执行同一条 `add` 命令即可覆盖为仓库最新版本：
 
 ```bash
-npx skills@latest add Jaxanyn/ruankao-sa-skills -a codex -g --skill rk-basic --skill rk-english --skill rk-case-card --skill rk-case-drill --skill rk-essay --skill rk-essay-template --skill rk-essay-final -y
+npx skills@latest add Jaxanyn/ruankao-sa-skills -a codex -g --skill rk-study --skill rk-basic --skill rk-english --skill rk-case-card --skill rk-case-drill --skill rk-essay --skill rk-essay-template --skill rk-essay-final -y
 ```
 
 只更新论文模板命令：
@@ -92,6 +93,12 @@ codex plugin add rk@rk
 安装后新开一个任务，让 Claude Code 重新加载插件。
 
 ## Examples
+
+继续学习并选择下一项任务：
+
+```text
+/rk-study 继续上次软考学习，优先安排最薄弱主题，只给我下一项任务。
+```
 
 补基础知识：
 
@@ -197,7 +204,10 @@ Skill 不会虚构题干、项目数据、技术栈、评分细则或官方政�
 
 ```powershell
 powershell -NoProfile -File scripts/sync-plugin-skills.ps1 -Check
+powershell -NoProfile -File scripts/validate-skills.ps1
 ```
+
+`validate-skills.ps1` 会检查 Skill 名称、引用文件、公共 Skill 中的本机绝对路径、插件镜像和 JSON 元数据。
 
 如果修改了根目录 Skill，再同步到 plugin：
 
@@ -212,6 +222,7 @@ ruankao-sa-skills/
 ├── .agents/plugins/marketplace.json
 ├── .claude-plugin/marketplace.json
 ├── skills/
+│   ├── rk-study/
 │   ├── rk-basic/
 │   ├── rk-english/
 │   ├── rk-case-card/
@@ -223,6 +234,7 @@ ruankao-sa-skills/
 │   ├── .codex-plugin/plugin.json
 │   ├── .claude-plugin/plugin.json
 │   └── skills/
+│       ├── rk-study/
 │       ├── rk-basic/
 │       ├── rk-english/
 │       ├── rk-case-card/

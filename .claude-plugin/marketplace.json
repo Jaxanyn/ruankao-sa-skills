@@ -8,8 +8,8 @@
   "plugins": [
     {
       "name": "rk",
-      "description": "提供 rk-basic、rk-english、rk-case-card、rk-case-drill、rk-essay、rk-essay-template 和 rk-essay-final 七个软考系统架构设计师备考 Skill，支持基础知识通俗讲解、举一反三和案例题变式短练。",
-      "version": "1.0.0",
+      "description": "提供 rk-study、rk-basic、rk-english、rk-case-card、rk-case-drill、rk-essay、rk-essay-template 和 rk-essay-final 八个软考系统架构设计师备考 Skill，支持复习编排、基础知识通俗讲解、举一反三和案例题变式短练。",
+      "version": "1.1.0",
       "category": "productivity",
       "source": "./plugins/rk",
       "homepage": "https://github.com/Jaxanyn/ruankao-sa-skills"

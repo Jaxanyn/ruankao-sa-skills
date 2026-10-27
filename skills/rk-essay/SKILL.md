@@ -27,6 +27,7 @@ Produce a credible, topic-aligned, pass-oriented essay. Treat the bundled sample
 9. Load [instructional-corpus.md](references/instructional-corpus.md) when using the converted Markdown books as knowledge samples for topic coverage, structure, or risk detection.
 10. Load [sample-calibration.md](references/sample-calibration.md) only when explaining corpus-based structural patterns.
 11. Load [theory-accuracy-check.md](references/theory-accuracy-check.md) when the draft contains theory sections, definitions, method comparisons, or named architecture concepts.
+12. If available, load `.rk-local/fact-ledger.md` and `.rk-local/study-state.md`; use [state-contract.md](../rk-study/references/state-contract.md) for fact status, mastery state, and the next practice task.
 
 ## Score Language
 
@@ -51,6 +52,12 @@ When comparing with a pass line, load [official-boundaries.md](references/offici
 8. `下一次练什么`：给出 1-3 项下一轮练习任务，每项说明目标、输入材料、限时要求和验收标准；优先选择最影响过线的缺口。
 9. `改写示例或提纲`：只改薄弱段落，或给出可替换骨架；不虚构项目数据。
 10. `考场模板`：仅在用户要求时输出，并标出必须按题干替换的部分。
+
+## 事实与结果口径
+
+- 项目事实分为 `已实施`、`已观察`、`计划`、`待核`；只有前两类可按已发生事实写入，后两类必须保留标记。
+- 指标目标、示范阈值和实测结果分开写；实测结果必须能回指用户提供的来源。
+- 题干覆盖、评分和下一次练习可写回 `.rk-local/study-state.md`；来源冲突按 [source-provenance.md](../rk-study/references/source-provenance.md) 处理。
 
 ## Completion Criteria
 

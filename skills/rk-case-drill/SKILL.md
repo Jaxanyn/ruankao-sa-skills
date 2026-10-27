@@ -15,6 +15,7 @@ description: "Case drill coach for the Advanced System Architect exam: four-opti
 4. 对用户草稿评分时，给出非官方训练分、置信度、主要丢分原因、改写建议和 1 行错题记录。
 5. 对不确定、超纲或材料来源不稳定的内容，标注为「训练推断」，不要说成官方结论。
 6. 对同类题训练，优先改变一个变量：业务场景、约束条件、问题问法或故障现象，保留原题可迁移的答题套路。
+7. 若工作区提供 `.rk-local/mistake-index.md` 或 `.rk-local/study-state.md`，先排除已练题并优先抽取薄弱标签；完成后按 [状态协议](../rk-study/references/state-contract.md) 输出下一练习。
 
 ## 默认菜单
 
@@ -92,6 +93,12 @@ description: "Case drill coach for the Advanced System Architect exam: four-opti
 - 不把训练材料中的趋势判断写成官方必考规则；官方考试范围、题型和合格线以当次考试通知为准。
 - 不虚构题干没有给出的技术栈、业务指标、版本号、分值细则和官方评分标准。
 - 变式题、短练题、训练推断题都要清楚标注，不冒充真题。
+
+## 状态与证据
+
+- 训练记录至少包含：来源、年份或场景、题目状态、错误标签和下一次动作；缺图或仅有回忆时明确标注。
+- 验证结果必须回答“请求是否接住、等待是否减少、异常是否受控、业务结果是否正确”；指标示例不能写成实测结果。
+- 跨 Skill 传递时遵循 [状态协议](../rk-study/references/state-contract.md) 和 [来源协议](../rk-study/references/source-provenance.md)。
 
 ## 分数口径
 
